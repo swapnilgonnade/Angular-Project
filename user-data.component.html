@@ -1,0 +1,47 @@
+
+<div class="m-3">
+    <div class="row">
+        <div class="col-sm-4 offset-1">
+            <form class="d-flex" role="search">
+                <i style="color: white;" class="fa-solid fa-cart-minus"></i>
+                <input class="form-control me-2" type="text" placeholder="Search Name" name="search" [(ngModel)]='firstName' aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" (click)="search()">Search</button>
+                <button class="btn btn-outline-danger" type="submit" (click)="clear()">Clear</button>
+            </form>
+            <form>
+
+                <select [(ngModel)]='sorting' style="padding: 9px;">
+                    <option value=''></option>
+                    <option value='firstName'>FirstName</option>
+                    <option value='lastName'>LastName</option>
+                </select>
+                <button  style="padding: 8px;" type="submit" (click)="sortButton()">Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-bordered p-5">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Email'ID</th>
+        <th scope="col">Passsword</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of user|filter:firstName:'firstName';let i = index">
+        <th>{{data.id}}</th>
+        <td>{{data.firstName}}</td>
+        <td>{{data.lastName}}</td>
+        <td>{{data.mobile}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.password}}</td>
+      </tr>
+     
+    </tbody>
+  </table>

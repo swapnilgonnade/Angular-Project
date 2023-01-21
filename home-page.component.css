@@ -1,0 +1,25 @@
+.firstpage{
+    background: url('../../../assets/img/bg-banner03.jpg') no-repeat fixed;
+      background-size: cover;
+      min-height: 530px;
+      position: relative;
+  }
+  .secpage{
+	background: url('../../../assets/img/about-banner.jpg') no-repeat ;
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+}
+.para{
+  margin-top:100px;
+}
+.contact1{
+	background-color:#0f0f39;
+}
+
+.jumbotron{
+	position: relative;
+	top:300px;
+	background-color: transparent !important;
+	color:white;
+}

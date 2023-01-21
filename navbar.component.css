@@ -1,0 +1,10 @@
+.navbar-brand{
+    color: white;
+}
+
+.btn{
+    color: white;
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+}

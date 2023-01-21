@@ -1,0 +1,32 @@
+<div class="container w-100 p-3" style="height:80vh;">
+    <div class="row">
+      <div class="col-sm-6 offset-3">
+        <div class="card">
+          <div class="card-header text-center">
+            <p class="fs-2 fw-bold">Login</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="loginPage()">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" formControlName="email">
+                <div  class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">Please Enter valid Email Id </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+                <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">Please Enter valid Password</div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+               <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  

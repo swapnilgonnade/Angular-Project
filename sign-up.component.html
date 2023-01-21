@@ -1,0 +1,52 @@
+<div class="container p-3">
+    <div class="row">
+      <div class="col-sm-6 offset-3">
+        <div class="card">
+          <div class="card-header text-center">
+            <p class="fs-2 fw-bold">Registration</p>
+          </div>
+          <div class="card-body">
+            <form  [formGroup]="profileForm" (ngSubmit)="signUp()">
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="exampleInputEmail1" class="form-label">FirstName</label>
+                  <input type="text" class="form-control" formControlName="firstName">
+                  <div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && (FirstName.dirty || FirstName.touched)">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="exampleInputEmail1" class="form-label">LastName</label>
+                  <input type="text" class="form-control" formControlName="lastName">
+                  <div class="form-text text-danger" *ngIf="LastName.errors?.['required'] && (LastName.dirty || LastName.touched)">We'll never share your email with anyone else.</div>
+  
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mobile</label>
+                <input type="type" class="form-control" formControlName="mobile">
+                <div class="form-text text-danger" *ngIf="Mobile.errors?.['required'] && (Mobile.dirty || Mobile.touched)">We'll never share your email with anyone else.</div>
+  
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" formControlName="email">
+                <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+                <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">We'll never share your email with anyone else.</div>
+  
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" formControlName="cpassword">
+              </div>
+               <button type="submit"  class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
